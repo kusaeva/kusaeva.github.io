@@ -7,6 +7,9 @@
 
 @import "reset";
 @import "variables";
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -19,7 +22,7 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 18px/1.4 $main;
   color: $darkGray;
 }
 
@@ -31,7 +34,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  font-family: $main;
   color: $darkerGray;
   font-weight: bold;
 
@@ -194,7 +197,7 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
+  font-family: $main;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
