@@ -55,6 +55,8 @@ scala> f(stringRef)
 
 `Nil` это объект, который расширяет (extends) `List[Nothing]`. То есть это пустой список нулевой длины, которые по сути не означает "пустоту" или "отсутствие значения", а является объектом, списком, просто без содержимого.
 
+![_config.yml]({{ site.baseurl }}/images/cat-box.gif)
+
 ```scala
 scala> Nil
 res1: scala.collection.immutable.Nil.type = List()
@@ -90,6 +92,7 @@ emptyIntList: List[Int] = List()
 
 Пример таких методов: методы, которые всегда выбрасывают исключения.
 
+![_config.yml]({{ site.baseurl }}/images/nothing.jpg)
 
 ### None
 
