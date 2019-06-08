@@ -75,7 +75,7 @@ res4: List[scala.collection.immutable.Nil.type] = List(List())
 
 `Nothing` это еще один трейт, он расширяет класс `Any`(все классы в Scala наследуются от `Any`), таким образом `Nothing` подтип *любого* класса в Scala. Важная особенность `Nothing` -- не существует экземпляров этого класса.
 
-Возвращаясь к `Nil`, так как это `List[Nothing]`, а `Nothing` подтип любого класса, можно использовать `Nil` как пустой тип списка `String`, `Int` или любого другого класса. Удобно.
+Возвращаясь к `Nil`, так как это `List[Nothing]`, а `Nothing` подтип любого класса, можно использовать `Nil` как пустой тип списка `String`, `Int` или любого другого класса. Это возможно потому, что List -- ковариантен. Удобно.
 
 ```scala
 scala> val emptyStringList: List[String] = List[Nothing]()
@@ -101,7 +101,8 @@ emptyIntList: List[Int] = List()
 Цель класса `Option` -- дать знать пользователям метода, что он может вернуть `T` в форме `Some[T]` или `None`, чтобы обозначить отсутствие результата.
 
 ```scala
-scala> def getOptString(n: Int): Option[String] = if (n > 0) Some("A positive number!") else None
+scala> def getOptString(n: Int): Option[String] =
+  if (n > 0) Some("A positive number!") else None
 getOptString: (n: Int)Option[String]
 
 scala> getOptString(1)
